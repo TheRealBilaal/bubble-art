@@ -36,8 +36,6 @@
 		$temp = explode(".", $_FILES["fileToUpload"]["name"]);
 		$newfilename = uniqid() . '.' . end($temp);
 	    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir . $newfilename)) {
-	        session_start();
-	        // $_SESSION["upload"] = $newfilename;
 			$host = $_SERVER["HTTP_HOST"];
 			header("Location: http://$host/?upload=".$newfilename);
 	    } else {
