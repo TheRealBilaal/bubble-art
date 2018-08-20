@@ -1,5 +1,4 @@
 <?php 
-	session_start();
 	if (!empty($_GET["upload"])) {
 		//User uploaded image
 		$img = "img-uploaded/" . $_GET["upload"];
