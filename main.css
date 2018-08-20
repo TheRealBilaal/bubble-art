@@ -1,0 +1,78 @@
+body {
+	font-family: sans-serif;
+	position: relative;
+}
+
+.menu-button {
+	position: fixed;
+	top: 35px;
+	right: 35px;
+	font-size: 22px;
+	color: grey;
+	cursor: pointer;
+	z-index: 999;
+}
+
+.blue {
+	color: #3BB9FF;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 100vh;
+	background-color: #fcfcfc;
+	z-index: 998;
+	-webkit-box-shadow: 0px 0px 46px -22px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 46px -22px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 46px -22px rgba(0,0,0,0.75);
+	display: none;
+}
+
+nav ul {
+	list-style: none;
+	text-align: left;
+	position: absolute;
+	top: 90px;
+}
+
+nav ul li {
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #3BB9FF;
+	font-size: 17px;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	position: relative;
+}
+
+nav ul li a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1.5px;
+	bottom: -1px;
+	left: 0;
+	background-color: #3BB9FF;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+nav ul li a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+section {
+	padding: 30px;
+}
