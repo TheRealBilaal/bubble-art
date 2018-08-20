@@ -78,38 +78,34 @@
 	                return;
 	            }
 
-	            try {
-	            	//Gets image URL generated from PHP
-	                var file = '<?php echo $img; ?>';
+            	//Gets image URL generated from PHP
+                var file = '<?php echo $img; ?>';
 
-	                var img = new Image();
+                var img = new Image();
 
-	                img.onload = function() {
-	                    var colorData;
+                img.onload = function() {
+                    var colorData;
 
-	                    try {
-	                        colorData = koala.loadImage(this);
-	                    } catch (e) {
-	                        colorData = null;
-	                        alert("There was an error loading the image.");
+                    try {
+                        colorData = koala.loadImage(this);
+                    } catch (e) {
+                        colorData = null;
+                        alert("There was an error loading the image.");
 
-	                        setTimeout(function() {
-	                            window.location.href = domian;
-	                        }, 750);
-	                    }
+                        setTimeout(function() {
+                            window.location.href = domian;
+                        }, 750);
+                    }
 
-	                    if (colorData) {
-	                        koala.makeCircles("#dots", colorData);
-	                    }
-	                };
+                    if (colorData) {
+                        koala.makeCircles("#dots", colorData);
+                    }
+                };
 
-	                //Allows for images from external servers
-	                img.crossOrigin = "Anonymous";
+                //Allows for images from external servers
+                img.crossOrigin = "Anonymous";
 
-	                img.src = file;
-	            } catch (e) {
-
-	            }
+                img.src = file;
 	        })();
 	    </script>
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
