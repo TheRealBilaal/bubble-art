@@ -1,5 +1,8 @@
 <header>
-	<div class="menu-button">
+	<div class="menu-button-show">
+		<span>Menu</span>
+	</div>
+	<div class="menu-button-hide">
 		<span>Menu</span>
 	</div>
 	<nav>

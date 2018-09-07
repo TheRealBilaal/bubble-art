@@ -3,24 +3,36 @@ body {
 	position: relative;
 }
 
-.menu-button {
+.menu-button-show {
 	position: fixed;
 	top: 35px;
 	right: 35px;
 	font-size: 22px;
 	color: grey;
 	cursor: pointer;
+	z-index: 997;
+}
+
+.menu-button-hide {
+	position: absolute;
+	top: 35px;
+	right: -300px;
+	width: 300px;
+	font-size: 22px;
+	color: #3BB9FF;
+	cursor: pointer;
 	z-index: 999;
 }
 
-.blue {
-	color: #3BB9FF;
+.menu-button-hide span {
+	position: absolute;
+	right: 35px;
 }
 
 nav {
 	position: fixed;
 	top: 0;
-	right: 0;
+	right: -300px;
 	width: 300px;
 	height: 100vh;
 	background-color: #fcfcfc;
@@ -28,7 +40,6 @@ nav {
 	-webkit-box-shadow: 0px 0px 46px -22px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 46px -22px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 46px -22px rgba(0,0,0,0.75);
-	display: none;
 }
 
 nav ul {
